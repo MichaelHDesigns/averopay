@@ -19,8 +19,8 @@
 
 class CValidationState;
 
-#define BLOCK_START_MASTERNODE_PAYMENTS_TESTNET 2222
-#define BLOCK_START_MASTERNODE_PAYMENTS 1000
+#define BLOCK_START_MASTERNODE_PAYMENTS_TESTNET 50
+#define BLOCK_START_MASTERNODE_PAYMENTS 100
 
 //#define START_MASTERNODE_PAYMENTS_TESTNET 1542915680  //Sat, 24 Feb 2018 00:00:00 GMT
 //#define START_MASTERNODE_PAYMENTS 1542915680  //Wed, 14 Mar 2018 00:00:00 GMT
@@ -56,7 +56,7 @@ class CRequestTracker;
 class CNode;
 
 
-static const int LAST_POW_BLOCK = 26280000;
+static const int LAST_POW_BLOCK = 999999999;
 static const int FAIR_LAUNCH_BLOCK = 10;
 static const unsigned int MAX_BLOCK_SIZE = 1000000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
@@ -69,7 +69,7 @@ static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const unsigned int MAX_INV_SZ = 50000;
 static const int64_t MIN_TX_FEE = 1000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64_t MAX_MONEY = 36500000 * COIN;
+static const int64_t MAX_MONEY = 40000000 * COIN;
 static const int64_t COIN_YEAR_REWARD = 0.1 * COIN;
 
 static const int64_t MAINNET_POSFIX = 100;
