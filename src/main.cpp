@@ -1308,7 +1308,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 		nSubsidy = 25 * COIN;
 	else if (pindexBest->nHeight <= 1051200)
 		nSubsidy = 25 * COIN;
-	else if (pindexBest->nHeight <= 26280000)
+	else if (pindexBest->nHeight <= 999999999)
 		nSubsidy = 25 * COIN;
     else if (pindexBest->nHeight > LAST_POW_BLOCK)
 		nSubsidy = 25; // PoW Ends
