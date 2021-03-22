@@ -1301,17 +1301,17 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	int64_t nSubsidy = 1 * COIN;
 
 	if (pindexBest->nHeight == 1)
-		nSubsidy = 1825000 * COIN;
+		nSubsidy = 100000 * COIN;
 	else if (pindexBest->nHeight <= 10803)
-                nSubsidy = 0.1 * COIN;
+                nSubsidy = 25 * COIN;
 	else if (pindexBest->nHeight <= 525600)
-		nSubsidy = 0.1 * COIN;
+		nSubsidy = 25 * COIN;
 	else if (pindexBest->nHeight <= 1051200)
-		nSubsidy = 0.1 * COIN;
+		nSubsidy = 25 * COIN;
 	else if (pindexBest->nHeight <= 26280000)
-		nSubsidy = 0.1 * COIN;
+		nSubsidy = 25 * COIN;
     else if (pindexBest->nHeight > LAST_POW_BLOCK)
-		nSubsidy = 0; // PoW Ends
+		nSubsidy = 25; // PoW Ends
 
 
     if (fDebug && GetBoolArg("-printcreation"))
@@ -3195,10 +3195,10 @@ bool LoadBlockIndex(bool fAllowNew)
 
     if (fTestNet)
     {
-        pchMessageStart[0] = 0xaf;
-        pchMessageStart[1] = 0x3c;
-        pchMessageStart[2] = 0x7b;
-        pchMessageStart[3] = 0xcc;
+        pchMessageStart[0] = 0xfa;
+        pchMessageStart[1] = 0xc3;
+        pchMessageStart[2] = 0xb7;
+        pchMessageStart[3] = 0xae;
 
         bnProofOfWorkLimit = bnProofOfWorkLimitTestNet; // 16 bits PoW target limit for testnet
         nStakeMinAge = 1 * 60 * 60; // test net min age is 1 hour
@@ -3650,7 +3650,7 @@ void static ProcessGetData(CNode* pfrom)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xfa, 0xf2, 0xef, 0xb4 };
+unsigned char pchMessageStart[4] = { 0xaf, 0x2f, 0xfe, 0x4b };
 
 bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, int64_t nTimeReceived)
 {
